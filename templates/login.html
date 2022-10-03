@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In </title>
+      <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+  <body>
+  <main>
+  <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+{% block content %}
+
+{% if message  %}
+    <div class="alert alert-secondary" role="alert">
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
+			<form action="#" method="POST">
+
+
+
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-envelope"></i>
+           		   </div>
+           		   <div class="div">
+
+           		   		<input type="email" name="email" class="input" placeholder="Enter email" >
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i">
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+
+           		    	<input type="password" name="password" class="input" placeholder="Password">
+            	   </div>
+            	</div>
+                 <h5>Don't have an account yet? </h5><a href="/"> Sign Up</a>
+            	<input type="submit" class="btn" value="Login">
+            </form>
+			{% endblock %}
+
+
+          </div>
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="static/img/img1.png" class="image img-1 show" alt="" />
+              <img src="static/img/img3.png" class="image img-2" alt="" />
+              <img src="static/img/img9.jpg" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+
+                  <h2>Review Analysis</h2>
+                    <h2>Sentiment Analysis</h2>
+                    <h2> Aspects Extraction </h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+
+        </div>
+        </div>
+  </div>
+</main>
+
+  <!-- Javascript file -->
+
+    <script src="static/app.js"></script>
+</body>
+</html>

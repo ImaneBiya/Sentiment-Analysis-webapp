@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Concepts</title>
+    <link href="{{url_for('static', filename='navbar.css')}}" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/table.css" />
+</head>
+<body>
+<header>
+	 <div class="nav_container">
+            <input type="checkbox" name="" id="check">
+
+            <div class="logo-container">
+                <h2 class="logo">Senti<span>Quick</span></h2>
+            </div>
+
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="/logged_in">Home</a>
+                        </li>
+
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Services<i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Data<i class="fa fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="/upload">Upload Dataset</a>
+                                                </li>
+
+                                                <li class="dropdown-link">
+                                                    <a href="/scrap">Scrape Tweets</a>
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Sentiment Analysis<i class="fa fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="/read">Identify the polarity(Upload file) </a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="/liste">Liste of files uploaded</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="/home">Identify the polarity(Upload file)</a>
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                         <li class="nav-link" style="--i: 1.35s">
+                            <a href="logged_in#about">About</a>
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="logged_in#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="log-sign" style="--i: 1.8s">
+                    <a href="/login" class="btn transparent">Logout</a>
+
+                </div>
+            </div>
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+	</header>
+<h1 style="text-align:center;">Concepts </h1>
+<div class="container mt-3">
+<div style="background-color: palegreen; text-align: center; height: 50px; color:#111; padding-top:10px;">
+    <strong>Number of positive reviews :</strong> {{ pos }}
+  </div>
+    <div style="background-color: salmon; text-align: center; height: 50px; color:#111; padding-top:10px;">
+    <strong>Number of negative reviews :</strong> {{ neg }}
+  </div>
+    <div style="background-color: #E6E6FA; text-align: center; height: 50px; color:#111; padding-top:10px;">
+    <strong>Number of neutral reviews :</strong> {{ neut }}
+  </div>
+</div>
+<div style="margin-left:30%;">
+{{ data|safe }}
+</div>
+</body>
+</html>
